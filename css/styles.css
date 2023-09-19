@@ -1,0 +1,118 @@
+/* Define global styles for the HTML and body elements */
+html,
+body {
+    height: 100%;
+    width: 100%;
+	/* Ensure the body takes up the full viewport height and width */
+}
+
+/* Style the main content area */
+main {
+    display: block;
+    min-height: 100%;
+    overflow: auto;
+	/* Allow the main content to scroll if necessary */
+}
+
+/* Apply Comic Sans MS font to all elements within the 'main' tag */
+main * {
+    font-family: Comic Sans MS;
+}
+
+/* Style for the project title */
+#project-title {
+    padding: 2.5em 1em !important;
+    text-shadow: 3px 3px 7px #000;
+	 /* Add padding and text shadow to the project title */
+}
+
+
+/* Loader */
+
+/* Define styles for the pre-loader container */
+div#pre-loader {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: brightness(0.5);
+    z-index: 9999999;
+	 /* Center the pre-loader in the viewport and apply backdrop filter */
+}
+
+/* Define styles for individual loader elements */
+#loader-container {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+/* Apply animations to individual loader elements with delays */
+#loader-container div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fff;
+    animation: pre-loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+#loader-container div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+#loader-container div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+#loader-container div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+/* Define keyframes for the loader animation */
+@keyframes pre-loader {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%,
+    100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+
+/* Style for the main image */
+#dImage {
+    width: 100%;
+    max-height: 15vh;
+    object-fit: scale-down;
+    object-position: center center;
+     /* Adjust image properties */
+}
+
+/* Style for small display images */
+img.mini-display-img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    object-position: center center;
+    padding: 0.1em;
+	/* Style small display images */
+}
+
+/* Style for the main display image */
+img#display-img {
+    width: 80%;
+    height: 25vh;
+    object-fit: scale-down;
+    object-position: center center;
+	  /* Style the main display image */
+}
